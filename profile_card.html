@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+
+    .card {
+      width: 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+    }
+
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+
+    .card h2 {
+      margin: 12px 0 8px;
+    }
+
+
+    .card p {
+      color: #555;
+      margin: 6px 0;
+    }
+
+    </style>
+</head>
+
+<body>
+
+<div id="card-container"></div>
+
+<script>
+    // Step 1 — Get container
+    const container = document.getElementById("card-container");
+
+    // Step 2 — Create card
+    const card = document.createElement("div");
+    card.className = "card";
+
+    // Step 3 — Image
+    const image = document.createElement("img");
+    image.src = "pfp.png";
+    image.alt = "Profile Picture";
+
+    // Step 4 — Name
+    const name = document.createElement("h2");
+    name.textContent = "Jordan Smith";
+
+    // Step 5 — Job
+    const job = document.createElement("p");
+    job.textContent = "Web Developer";
+
+    // Step 6 — Location
+    const locationText = document.createElement("p");
+    locationText.textContent = "Phoenix, Arizona";
+
+    // Step 7 — Assemble card
+    card.appendChild(image);
+    card.appendChild(name);
+    card.appendChild(job);
+    card.appendChild(locationText);
+
+    // Step 8 — Add to page
+    container.appendChild(card);
+</script>
+
+</body>
+</html>
